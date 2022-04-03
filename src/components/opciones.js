@@ -7,8 +7,11 @@ export default class Opciones extends React.Component {
         const {opcionB} = this.props
         return(
             <>
+
             <button onClick={() =>{opcionA()}}>A: {opcion.a}</button>
+            {/*<p>{opcion.a}</p>*/}
             <button onClick={() =>{opcionB()}}>B: {opcion.b}</button>
+            {/*<p>{opcion.b}</p>*/}
             </>
             
         )

@@ -14,7 +14,6 @@ export default class Conteiner extends React.Component {
         };
     }
 
-
     opcionA = () => {
         if (this.state.opActual < 5)
         {
@@ -46,11 +45,15 @@ export default class Conteiner extends React.Component {
         }
         return i
     }
+
+    componentDidMount(json){
+        alert("Bienvenido a mi juego!");
+    }
+
     render() {
-        const data = json
+        const data = json;
         return(
             <>
-            {/* <Historia historia = {data[() => {this.buscarPorID(this.state.opActual+this.state.varActual)}].historia}></Historia> */}
             <Historia historia = {data[this.buscarPorID(data,this.state.opActual+this.state.varActual)].historia}></Historia>
             <Opciones opcion = {data[this.buscarPorID(data,this.state.opActual+this.state.varActual)].opciones} opcionA = {this.opcionA} opcionB = {this.opcionB}/>
             <p>Seleccion anterior: {this.state.historial[this.state.historial.length-1]}</p>
